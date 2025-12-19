@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profile from '../assets/Pic.avif'; // Your professional photo
+import profile from '../assets/Pic.png'; // Your professional photo
 
 const Hero = () => {
   return (
@@ -51,7 +51,7 @@ const Hero = () => {
             <img
               src={profile}
               alt="Profile"
-              className="relative rounded-2xl w-full h-full object-cover shadow-2xl "
+              className="relative rounded-full w-full h-full object-cover shadow-2xl "
             />
           </motion.div>
         </div>

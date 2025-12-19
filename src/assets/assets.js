@@ -1,16 +1,9 @@
 import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaMobileAlt, FaTools, FaVuejs, FaDatabase, FaCloud, FaJsSquare, FaRobot } from 'react-icons/fa';
 
-import profileImg from '../assets/profile.avif';
-import projectImg1 from '../assets/project1.jpg';
-import projectImg2 from '../assets/projects2.jpg';
-import projectImg3 from '../assets/project3.jpg';
-import projectImg4 from '../assets/project4.webp';
-import projectImg5 from '../assets/project5.webp';
-import projectImg6 from '../assets/project6.avif';
-
+// Since images are in public/, no import needed
 export const assets = {
-    profileImg,
-}
+    profileImg: '/profile.png',
+};
 
 export const aboutInfo = [
     {
@@ -76,7 +69,7 @@ export const projects = [
   {
     title: "Modern Portfolio Website",
     description: "A sleek, responsive portfolio to showcase my projects and skills with interactive animations and dark/light mode support.",
-    image: projectImg1,
+   image: '/images/project1.avif',
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
     demo: "#",
@@ -85,7 +78,7 @@ export const projects = [
   {
     title: "Interactive Dashboard",
     description: "A data visualization dashboard with charts, filters, and responsive design for seamless user experience.",
-    image: projectImg2,
+    image: '/images/project2.webp',
     tech: ["React", "Chart.js", "Tailwind CSS"],
     icons: [FaReact, FaDatabase],
     demo: "#",
@@ -94,7 +87,7 @@ export const projects = [
   {
     title: "E-Commerce Frontend",
     description: "A fast, responsive online store frontend with dynamic product listings, filters, and animations.",
-    image: projectImg3,
+    image: '/images/project3.avif',
     tech: ["React", "Next.js", "Tailwind CSS"],
     icons: [FaReact, FaCloud],
     demo: "#",
@@ -103,7 +96,7 @@ export const projects = [
   {
     title: "Landing Page Template",
     description: "A modern, mobile-friendly landing page template with animations, responsive layout, and call-to-action sections.",
-    image: projectImg4,
+    image: '/images/project4.webp',
     tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
     icons: [FaCode, FaPaintBrush],
     demo: "#",
@@ -112,7 +105,7 @@ export const projects = [
   {
     title: "Chat Interface UI",
     description: "A real-time chat interface with clean design, message animations, and interactive UI components.",
-    image: projectImg5,
+    image: '/images/project5.avif',
     tech: ["React", "Socket.IO", "Tailwind CSS"],
     icons: [FaReact, FaCloud],
     demo: "#",
@@ -121,7 +114,7 @@ export const projects = [
   {
     title: "AI Image Gallery",
     description: "A frontend interface to generate, display, and manage AI-generated images with smooth animations and responsive layout.",
-    image: projectImg6,
+    image: '/images/project6.avif',
     tech: ["React", "OpenAI API", "Tailwind CSS"],
     icons: [FaRobot, FaReact],
     demo: "#",

@@ -3,54 +3,38 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false); // new state
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // start loading
+    setLoading(true);
 
-    const SERVICE_ID = "service_k34efo8";    
-    const TEMPLATE_ID = "template_27tmfnl";  
-    const PUBLIC_KEY = "jqj4lf6bdtVRW4-GE"; 
+    const SERVICE_ID = "service_k34efo8";
+    const TEMPLATE_ID = "template_27tmfnl";
+    const PUBLIC_KEY = "jqj4lf6bdtVRW4-GE";
 
-    emailjs
-      .send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          title: "Contact Form",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        PUBLIC_KEY
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setStatus("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" });
-          setLoading(false); // stop loading
-          setTimeout(() => setStatus(""), 5000);
-        },
-        (error) => {
-          console.error("FAILED...", error);
-          setStatus("Failed to send message. Try again later.");
-          setLoading(false); // stop loading
-          setTimeout(() => setStatus(""), 5000);
-        }
-      );
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }, PUBLIC_KEY);
+
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setStatus("Failed to send message. Please try again later or use alternative emails below.");
+    }
+
+    setLoading(false);
+    setTimeout(() => setStatus(""), 6000);
   };
 
   return (
@@ -67,7 +51,7 @@ const Contact = () => {
           Get in <span className="text-purple">Touch</span>
         </h2>
         <p className="text-gray-400 text-center mb-16 text-lg">
-          I’m always open to discussing new projects, creative ideas, or opportunities to collaborate.
+          I’m always open to discussing projects, ideas, or collaboration opportunities.
         </p>
 
         {/* Contact Form */}
@@ -106,11 +90,11 @@ const Contact = () => {
             rows="6"
             className="px-4 py-3 rounded-xl bg-dark-400 border border-gray-700 text-gray-200 focus:outline-none focus:border-purple transition resize-none"
             required
-          ></textarea>
+          />
 
           <button
             type="submit"
-            disabled={loading} // disable during loading
+            disabled={loading}
             className={`bg-purple text-dark-100 font-semibold px-6 py-3 rounded-xl hover:bg-purple/80 transition flex items-center justify-center ${
               loading ? "cursor-not-allowed opacity-70" : ""
             }`}
@@ -133,15 +117,14 @@ const Contact = () => {
           )}
         </motion.form>
 
-        {/* Contact Info */}
+        {/* Optional Contact Info */}
         <div className="mt-12 text-center text-gray-400 space-y-3">
-          <p>Email 1: <span className="text-purple">hamidkhancs@gmail.com</span></p>
-          <p>Email 2: <span className="text-purple">webnovaai@gmail.com</span></p>
-          <p>Phone: <span className="text-purple">00923149290853</span></p>
+          <p>Alternative Email: <span className="text-purple">webnovaai@gmail.com</span></p>
+          <p>Phone: <span className="text-purple">+92 314 9290853</span></p>
           <div className="flex justify-center gap-6 mt-4 text-2xl text-gray-400">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition duration-300">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition duration-300">LinkedIn</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition duration-300">Twitter</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition">Twitter</a>
           </div>
         </div>
       </div>

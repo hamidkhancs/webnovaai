@@ -51,7 +51,7 @@ const Hero = () => {
             <img
               src={profile}
               alt="Profile"
-              className="relative rounded-full w-full h-full object-cover shadow-2xl "
+              className="relative rounded-full w-full h-full object-cover  "
             />
           </motion.div>
         </div>

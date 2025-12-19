@@ -137,7 +137,7 @@ const Contact = () => {
         <div className="mt-12 text-center text-gray-400 space-y-3">
           <p>Email 1: <span className="text-purple">hamidkhancs@gmail.com</span></p>
           <p>Email 2: <span className="text-purple">webnovaai@gmail.com</span></p>
-          <p>Phone: <span className="text-purple">03149290853</span></p>
+          <p>Phone: <span className="text-purple">00923149290853</span></p>
           <div className="flex justify-center gap-6 mt-4 text-2xl text-gray-400">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition duration-300">GitHub</a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple transition duration-300">LinkedIn</a>

@@ -1,164 +1,157 @@
-import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
+import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaMobileAlt, FaTools, FaVuejs, FaDatabase, FaCloud, FaJsSquare, FaRobot } from 'react-icons/fa';
 
 import profileImg from '../assets/profile.avif';
-import projectImg1 from '../assets/project1.avif';
-import projectImg2 from '../assets/project2.avif';
-import projectImg3 from '../assets/project3.avif';
-import projectImg4 from '../assets/project4.avif';
-import projectImg5 from '../assets/project5.avif';
+import projectImg1 from '../assets/project1.jpg';
+import projectImg2 from '../assets/projects2.jpg';
+import projectImg3 from '../assets/project3.jpg';
+import projectImg4 from '../assets/project4.webp';
+import projectImg5 from '../assets/project5.webp';
 import projectImg6 from '../assets/project6.avif';
-
 
 export const assets = {
     profileImg,
 }
 
-
 export const aboutInfo = [
     {
       icon: FaLightbulb,
-      title: 'Innovative',
-      description: 'I love creating unique solutions to complex problems with cutting-edge technologies.',
+      title: 'Creative Thinker',
+      description: 'I design intuitive and engaging interfaces that enhance user experience and deliver results.',
       color: 'text-purple'
     },
     {
       icon: FaPaintBrush,
-      title: 'Design Oriented',
-      description: 'Beautiful design and user experience are at the heart of everything I create.',
+      title: 'Design-Focused',
+      description: 'Every project I build balances functionality and aesthetic appeal for modern web experiences.',
       color: 'text-pink'
     },
     {
       icon: FaCode,
-      title: 'Clean Code',
-      description: 'I write maintainable, efficient code following best practices and modern patterns.',
+      title: 'Efficient Coder',
+      description: 'I write clean, modular, and maintainable code using best practices and modern frameworks.',
       color: 'text-blue'
     }
-  ];
-
-
+];
 
 export const skills = [
   {
     title: 'Frontend Development',
     icon: FaReact,
-    description: 'Building responsive and interactive user interfaces with modern frameworks.',
-    tags: ['React', 'Vue.js', 'Angular', 'TypeScript']
+    description: 'Creating responsive, interactive web applications with React, Tailwind, and modern frontend tools.',
+    tags: ['React', 'Next.js', 'Vue.js', 'JavaScript', 'TypeScript']
   },
   {
-    title: 'Backend Development',
-    icon: FaServer,
-    description: 'Creating robust server-side applications and RESTful APIs.',
-    tags: ['Node.js', 'Express', 'Django', 'Laravel']
+    title: 'UI/UX Design',
+    icon: FaPaintBrush,
+    description: 'Building visually appealing and user-friendly interfaces using modern design principles.',
+    tags: ['Figma', 'Adobe XD', 'Tailwind CSS', 'CSS3', 'HTML5']
   },
   {
-    title: 'Database Management',
-    icon: FaDatabase,
-    description: 'Designing and optimizing databases for performance and scalability.',
-    tags: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase']
+    title: 'Performance Optimization',
+    icon: FaCode,
+    description: 'Optimizing frontend performance, reducing load times, and improving accessibility across devices.',
+    tags: ['Code Splitting', 'Lazy Loading', 'Responsive Design', 'SEO', 'Web Vitals']
   },
   {
-    title: 'Mobile Development',
+    title: 'Modern JavaScript',
+    icon: FaJsSquare,
+    description: 'Writing modern, maintainable JavaScript with ES6+ features and best practices.',
+    tags: ['ES6+', 'DOM Manipulation', 'Promises', 'Async/Await', 'Fetch API']
+  },
+  {
+    title: 'Cross-Platform Apps',
     icon: FaMobileAlt,
-    description: 'Building cross-platform mobile applications with modern tools.',
-    tags: ['React Native', 'Flutter', 'Ionic', 'Swift']
+    description: 'Developing mobile-friendly and progressive web applications for various platforms.',
+    tags: ['React Native', 'PWA', 'Responsive Design']
   },
   {
-    title: 'Cloud & DevOps',
-    icon: FaCloud,
-    description: 'Deploying and managing applications in cloud environments.',
-    tags: ['AWS', 'Docker', 'Kubernetes', 'CI/CD']
-  },
-  {
-    title: 'Tools & Technologies',
+    title: 'Developer Tools',
     icon: FaTools,
-    description: 'Essential tools and technologies I use in my development workflow.',
-    tags: ['Git & GitHub', 'Webpack', 'Figma', 'Jest']
+    description: 'Using essential tools to enhance workflow, version control, and testing for frontend projects.',
+    tags: ['Git', 'VS Code', 'Jest', 'ESLint', 'Prettier']
   }
 ];
 
-
-
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online store with shopping cart, user authentication, and payment processing.",
+    title: "Modern Portfolio Website",
+    description: "A sleek, responsive portfolio to showcase my projects and skills with interactive animations and dark/light mode support.",
     image: projectImg1,
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    icons: [FaReact, FaNodeJs, FaDatabase , FaStripe],
-    demo: "#",
-    code: "#",
-  },
-  {
-    title: "Task Management App",
-    description: "A productivity application with drag-and-drop functionality and real-time updates.",
-    image: projectImg2,
-    tech: ["Vue.js", "Firebase", "Tailwind CSS", "WebSockets"],
-    icons: [FaVuejs, FaFire, FaCloud , FaDatabase],
-    demo: "#",
-    code: "#",
-  },
-  {
-    title: "Fitness Tracker",
-    description: "A mobile app for tracking workouts, nutrition, and health metrics.",
-    image: projectImg3,
-    tech: ["React Native", "GraphQL", "MySQL", "Chart.js"],
-    icons: [FaReact, FaDatabase],
-    demo: "#",
-    code: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description: "A personal portfolio to showcase projects, skills, and blogs with dark/light mode support.",
-    image: projectImg4,
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "Markdown"],
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
     demo: "#",
     code: "#",
   },
   {
-    title: "Chat App",
-    description: "A real-time chat application with group messaging, emojis, and file sharing.",
-    image: projectImg5,
-    tech: ["Socket.IO", "React", "Node.js", "MongoDB"],
-    icons: [FaReact, FaNodeJs, FaDatabase ],
+    title: "Interactive Dashboard",
+    description: "A data visualization dashboard with charts, filters, and responsive design for seamless user experience.",
+    image: projectImg2,
+    tech: ["React", "Chart.js", "Tailwind CSS"],
+    icons: [FaReact, FaDatabase],
     demo: "#",
     code: "#",
   },
   {
-    title: "AI Image Generator",
-    description: "Generate images using AI prompts powered by OpenAI's DALL·E model and Cloudinary.",
+    title: "E-Commerce Frontend",
+    description: "A fast, responsive online store frontend with dynamic product listings, filters, and animations.",
+    image: projectImg3,
+    tech: ["React", "Next.js", "Tailwind CSS"],
+    icons: [FaReact, FaCloud],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Landing Page Template",
+    description: "A modern, mobile-friendly landing page template with animations, responsive layout, and call-to-action sections.",
+    image: projectImg4,
+    tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    icons: [FaCode, FaPaintBrush],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "Chat Interface UI",
+    description: "A real-time chat interface with clean design, message animations, and interactive UI components.",
+    image: projectImg5,
+    tech: ["React", "Socket.IO", "Tailwind CSS"],
+    icons: [FaReact, FaCloud],
+    demo: "#",
+    code: "#",
+  },
+  {
+    title: "AI Image Gallery",
+    description: "A frontend interface to generate, display, and manage AI-generated images with smooth animations and responsive layout.",
     image: projectImg6,
-    tech: ["React", "OpenAI API", "Cloudinary", "Tailwind CSS"],
-    icons: [FaRobot, FaReact, FaCloud],
+    tech: ["React", "OpenAI API", "Tailwind CSS"],
+    icons: [FaRobot, FaReact],
     demo: "#",
     code: "#",
   }
 ];
 
-
 export const workData = [
   {
-    role: "Senior Frontend Developer",
-    company: "TechCorp Inc.",
-    duration: "2020 - Present",
+    role: "Frontend Developer",
+    company: "Freelance Projects",
+    duration: "2021 - Present",
     description:
-      "Leading frontend development for enterprise clients, implementing modern frameworks, and mentoring junior developers.",
+      "Building responsive websites and modern web applications for clients, focusing on UI/UX, performance, and maintainability.",
     color: "purple"
   },
   {
-    role: "Web Developer",
-    company: "Digital Solutions LLC",
-    duration: "2018 - 2020",
+    role: "Junior Frontend Developer",
+    company: "Creative Web Studio",
+    duration: "2019 - 2021",
     description:
-      "Developed and maintained web applications for various clients, focusing on responsive design and performance optimization.",
+      "Developed landing pages, interactive UI components, and assisted in design implementation for client projects.",
     color: "pink"
   },
   {
-    role: "Junior Developer",
-    company: "StartUp Ventures",
-    duration: "2016 - 2018",
+    role: "Intern Frontend Developer",
+    company: "Startup Lab",
+    duration: "2018 - 2019",
     description:
-      "Started my career building basic websites and gradually took on more complex projects as I expanded my skill set.",
+      "Learned modern frontend practices, built prototypes, and contributed to web projects under mentorship.",
     color: "blue"
   }
 ];

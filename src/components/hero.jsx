@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profile from '../assets/pic.jpg'
+import profile from '../assets/Pic.jpg'
 const Hero = () => {
   console.log("Page Loaded");
   return (
